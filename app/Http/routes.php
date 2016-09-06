@@ -30,8 +30,8 @@ Route::get('/ios', 'AdminController@ios');
 
 Route::get('home', 'HomeController@index');
 
-Route::get('user/reg', 'UserController@reg');
+Route::any('user/reg', 'UserController@reg');
 
-Route::get('user/login', 'UserController@login');
+Route::any('user/login', 'UserController@login');
 
 Route::get('/logout', 'UserController@logout');
