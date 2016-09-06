@@ -29,6 +29,44 @@
 <div class="col-md-1"></div>
 </div>
 
+<div class="row">
+<div class="col-md-1"></div>
+<div class="panel col-md-10">
+    <div class="panel col-md-10">
+      <table class="table mb0">
+        <tr>
+          <td>#</td>
+          <td>name</td>
+          <td>开始时间</td>
+          <td>结束时间</td>
+          <td>下载流量</td>
+          <td>上传流量</td>
+          <td>连接时间</td>
+        </tr>
+        <?php foreach ($acct as $key => $v): ?>
+          <tr>
+            <td>{{$key}}</td>
+            <td>{{$v->username}}</td>
+            <td>{{$v->acctstarttime}}</td>
+            <td>{{$v->acctstoptime}}</td>
+            <td>{{$v->acctinputoctets}}</td>
+            <td>{{$v->acctoutputoctets}}</td>
+            <td>{{$v->acctsessiontime}}</td>
+          </tr>
+        <?php endforeach; ?>
+      </table>
+    </div>
+</div>
+<div class="col-md-1"></div>
+</div>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-12">
+      <?php echo $acct->render(); ?>
+    </div>
+  </div>
+</div>
 
 
 @stop

@@ -16,11 +16,11 @@ class HomeController extends Controller
         $name =  Session::get('name');
         if ($name) {
             $ret = DB::select("select sum(acctinputoctets) 'in' ,sum(acctoutputoctets) 'out'  from radacct where username = ?", [$name]);
-            $data = array('data' => $ret);
+            $acct = DB::table('radacct')->where('username',$name)->orderby('radacctid','desc')->paginate(15);
+            $data = array('data' => $ret,'acct'=>$acct);
             return view('home', $data);
         } else {
             return redirect('/');
         }
     }
 }
-
