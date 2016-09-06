@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="row">
-  <div class="alert alert-success text-center"> 请先使用测试帐号尝试你的网络是否适合. 链接方式：手机系统自带pptp。用户名：pazu。密码：w123123</div>
+  <div class="alert alert-success text-center"> 请先使用测试帐号尝试你的网络是否适合. 链接方式：手机系统自带pptp。地址：45.32.36.201。用户名：pazu。密码：w123123</div>
 </div>
 
 <div class="row">
