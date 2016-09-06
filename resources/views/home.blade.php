@@ -49,9 +49,9 @@
             <td>{{$v->username}}</td>
             <td>{{$v->acctstarttime}}</td>
             <td>{{$v->acctstoptime}}</td>
-            <td>{{$v->acctinputoctets}}</td>
-            <td>{{$v->acctoutputoctets}}</td>
-            <td>{{$v->acctsessiontime}}</td>
+            <td>{{number_format($v->acctinputoctets/1024/1024)}}M</td>
+            <td>{{number_format($v->acctoutputoctets/1024/1024)}}M</td>
+            <td>{{number_format($v->acctsessiontime/60)}}min</td>
           </tr>
         <?php endforeach; ?>
       </table>
