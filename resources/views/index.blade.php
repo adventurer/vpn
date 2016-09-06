@@ -17,7 +17,7 @@
     <div id="div1" class=" panel">
       <div class="panel-heading border"> 注册 </div>
       <div class="panel-body">
-        <form action="/user/reg" class="form-horizontal bordered-group" role="form">
+        <form action="/user/reg" class="form-horizontal bordered-group" role="form" method="post">
           <div class="form-group">
             <label class="col-sm-2 control-label">用户名：</label>
             <div class="col-sm-10">
@@ -47,7 +47,7 @@
     <div id="div2" class=" panel" style="display:none;">
       <div class="panel-heading border"> 登录 </div>
       <div class="panel-body">
-        <form action="/user/login" class="form-horizontal bordered-group" role="form">
+        <form action="/user/login" class="form-horizontal bordered-group" role="form" method="post">
           <div class="form-group">
             <label class="col-sm-2 control-label">用户名：</label>
             <div class="col-sm-10">
