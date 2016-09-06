@@ -1,7 +1,9 @@
 @extends('layout.common')
 @section('content')
 
-
+<div class="row">
+  <div class="alert alert-success text-center"> 请先使用测试帐号尝试你的网络是否适合. 链接方式：手机系统自带pptp。用户名：pazu。密码：w123123</div>
+</div>
 
 <div class="row">
   <div class="col-md-3">
@@ -83,9 +85,9 @@
 
 <script type="text/javascript">
   function change(i){
-    $('#div1').hide(1);
-    $('#div2').hide(1);
-    $('#div'+i).show();
+    $('#div1').hide(3);
+    $('#div2').hide(3);
+    $('#div'+i).show(3);
   }
 </script>
 @stop
