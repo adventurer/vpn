@@ -32,29 +32,35 @@
 <div class="row">
 <div class="col-md-1"></div>
 <div class="panel col-md-10">
-    <div class="panel col-md-10">
-      <table class="table mb0">
-        <tr>
-          <td>#</td>
-          <td>name</td>
-          <td>开始时间</td>
-          <td>结束时间</td>
-          <td>上传流量</td>
-          <td>下载流量</td>
-          <td>连接时间</td>
-        </tr>
-        <?php foreach ($acct as $key => $v): ?>
-          <tr>
-            <td>{{$key}}</td>
-            <td>{{$v->username}}</td>
-            <td>{{$v->acctstarttime}}</td>
-            <td>{{$v->acctstoptime}}</td>
-            <td>{{number_format($v->acctinputoctets/1024/1024)}}M</td>
-            <td>{{number_format($v->acctoutputoctets/1024/1024)}}M</td>
-            <td>{{number_format($v->acctsessiontime/60)}}min</td>
-          </tr>
-        <?php endforeach; ?>
-      </table>
+    <div class="mb25">
+      <div class="panel-body">
+        <table class="table mb0">
+          <thead>
+            <tr>
+              <td>#</td>
+              <td>name</td>
+              <td>开始时间</td>
+              <td>结束时间</td>
+              <td>上传流量</td>
+              <td>下载流量</td>
+              <td>连接时间</td>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($acct as $key => $v): ?>
+              <tr>
+                <td>{{$key}}</td>
+                <td>{{$v->username}}</td>
+                <td>{{$v->acctstarttime}}</td>
+                <td>{{$v->acctstoptime}}</td>
+                <td>{{number_format($v->acctinputoctets/1024/1024)}}M</td>
+                <td>{{number_format($v->acctoutputoctets/1024/1024)}}M</td>
+                <td>{{number_format($v->acctsessiontime/60)}}min</td>
+              </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
     </div>
 </div>
 <div class="col-md-1"></div>
