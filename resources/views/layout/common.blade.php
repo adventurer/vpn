@@ -16,7 +16,7 @@
     <div class="app">
       <div class=main-panel>
         <header class="header navbar">
-          <ul class="nav navbar-nav hidden-xs">
+          <ul class="nav navbar-nav">
             <li>
               <p class=navbar-text> vpn.xlvlx.com </p>
             </li>
