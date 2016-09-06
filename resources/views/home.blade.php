@@ -39,8 +39,8 @@
           <td>name</td>
           <td>开始时间</td>
           <td>结束时间</td>
-          <td>下载流量</td>
           <td>上传流量</td>
+          <td>下载流量</td>
           <td>连接时间</td>
         </tr>
         <?php foreach ($acct as $key => $v): ?>
