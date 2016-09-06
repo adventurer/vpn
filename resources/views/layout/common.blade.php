@@ -13,7 +13,7 @@
   <link rel=stylesheet href=/static/styles/app.min.df5e9cc9.css>
 
   <body>
-    <div class="app layout-fixed-header">
+    <div class="app">
       <div class=main-panel>
         <header class="header navbar">
           <ul class="nav navbar-nav hidden-xs">

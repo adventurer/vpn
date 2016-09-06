@@ -1,0 +1,26 @@
+@extends('layout.common')
+@section('content')
+<div class="panel col-md-10">
+  <table class="table mb0">
+    <tr>
+      <td>name</td>
+      <td>in</td>
+      <td>out</td>
+      <td>total</td>
+      <td>time</td>
+    </tr>
+    <?php foreach ($data as $key => $v) {
+    ?>
+      <tr>
+        <td>{{$v->username}}</td>
+        <td>{{number_format($v->in,2)}}M</td>
+        <td>{{number_format($v->out,2)}}M</td>
+        <td>{{number_format($v->total,2)}}M</td>
+        <td>{{gmstrftime('%H:%M:%S',$v->alltime)}}分</td>
+      </tr>
+    <?php
+
+} ?>
+  </table>
+</div>
+@stop
