@@ -33,7 +33,7 @@
 <div class="col-md-1"></div>
 <div class="panel col-md-10">
     <div class="mb25">
-      <div class="panel-body">
+      <div class="panel-body table-responsive">
         <table class="table mb0">
           <thead>
             <tr>
