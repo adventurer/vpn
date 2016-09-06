@@ -1,5 +1,8 @@
 @extends('layout.common')
 @section('content')
+
+<div class="row">
+<div class="col-md-1"></div>
 <div class="panel col-md-10">
   <table class="table mb0">
     <tr>
@@ -27,4 +30,8 @@
 } ?>
   </table>
 </div>
+<div class="col-md-1"></div>
+</div>
+
+
 @stop
