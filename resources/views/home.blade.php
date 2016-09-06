@@ -1,5 +1,8 @@
 @extends('layout.common')
 @section('content')
+
+<div class="row">
+<div class="col-md-1"></div>
 <div class="panel col-md-10">
   <div class="panel-body">
     <p>连接方式：pptp</p>
@@ -8,7 +11,12 @@
     <p>密码：我也不知道你写了啥</p>
   </div>
 </div>
+<div class="col-md-1"></div>
+</div>
 
+
+<div class="row">
+<div class="col-md-1"></div>
 <div class="panel col-md-10">
 <div class="panel-heading border"> 消耗 </div>
 <div class="panel-body">
@@ -18,4 +26,9 @@
 <p class="pull-right">流入{{number_format($data[0]->in/1020/1024,2)}}M/流出{{number_format($data[0]->out/1024/1024,2)}}M/总共:{{number_format(($data[0]->in+$data[0]->out)/1024/1024,2)}}M</p>
 </div>
 </div>
+<div class="col-md-1"></div>
+</div>
+
+
+
 @stop
