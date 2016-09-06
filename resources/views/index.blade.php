@@ -76,6 +76,19 @@
 
 
 
+<?php if (@$info): ?>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="alert bg-purple text-center">{{@$info}}</div>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+<?php endif; ?>
+
+
+
 
 
 

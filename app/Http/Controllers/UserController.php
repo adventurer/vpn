@@ -28,12 +28,16 @@ class UserController extends Controller
         $name = Request::input('name')?Request::input('name'):'';
         $pwd = Request::input('pwd')?Request::input('pwd'):'';
         $code = Request::input('code')?Request::input('code'):'';
-        if ($code) {
+        $flag = DB::select("select * from vcode where info = ?", [$code]);
+        $info = '';
+        if (!empty($flag)) {
             $flag = DB::insert("insert into radcheck (username,attribute,op,value) values (?,?,?,?)", [$name, 'User-Password', ':=', $pwd ]);
             Session::put('name', $name);
             return redirect('home');
+        }else{
+          $info = '少年，邀请码不正哟，O(∩_∩)O';
         }
-        return redirect('/');
+        return view('index',['info'=>$info]);
     }
 
     public function logout()

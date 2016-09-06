@@ -6,7 +6,7 @@
 <div class="panel col-md-10">
   <div class="panel-body">
     <p>连接方式：pptp</p>
-    <p>连接地址：106.186.17.65</p>
+    <p>连接地址：45.32.36.201</p>
     <p>用户名：<?php echo Session::get('name');?></p>
     <p>密码：我也不知道你写了啥</p>
   </div>
