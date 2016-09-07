@@ -19,6 +19,9 @@ class UserController extends Controller
         if (!empty($user)) {
             Session::put('name', $name);
             return redirect('home');
+        }else{
+          $info = '少年，用户名或密码错哟，O(∩_∩)O';
+          return view('index',['info'=>$info]);
         }
         return redirect('/');
     }
@@ -45,7 +48,7 @@ class UserController extends Controller
             Session::put('name', $name);
             return redirect('home');
         }else{
-          $info = '少年，邀请码不正哟，O(∩_∩)O';
+          $info = '少年，邀请码不对哟，O(∩_∩)O';
         }
         return view('index',['info'=>$info]);
     }
