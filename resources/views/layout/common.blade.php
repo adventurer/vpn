@@ -18,7 +18,7 @@
         <header class="header navbar">
           <ul class="nav navbar-nav">
             <li>
-              <p class=navbar-text> vpn.xlvlx.com </p>
+              <a href="http://vpn.xlvlx.com"><p class=navbar-text> vpn.xlvlx.com </p></a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right hidden-xs">

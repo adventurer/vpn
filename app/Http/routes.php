@@ -35,3 +35,7 @@ Route::any('user/reg', 'UserController@reg');
 Route::any('user/login', 'UserController@login');
 
 Route::get('/logout', 'UserController@logout');
+
+Route::get('/vcode', 'VcodeController@index');
+
+Route::get('/vcode/generation', 'VcodeController@generation');

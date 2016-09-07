@@ -28,7 +28,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">密码：</label>
             <div class="col-sm-10">
-              <input name="pwd" class="form-control" Placeholder="4到10位字母或数字">
+              <input type="password" name="pwd" class="form-control" Placeholder="4到10位字母或数字">
             </div>
           </div>
           <div class="form-group">
@@ -58,7 +58,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">密码：</label>
             <div class="col-sm-10">
-              <input name="pwd" class="form-control">
+              <input type="password" name="pwd" class="form-control">
             </div>
           </div>
         <div class="form-group" style="text-align:center;">
