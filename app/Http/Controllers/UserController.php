@@ -34,17 +34,17 @@ class UserController extends Controller
         $flag = DB::select("select * from vcode where info = ?", [$code]);
         $now = date('Y-m-d H:i:s');
         $info = '';
+        $user =DB::select("select * from radcheck where username = ?",[$name]);
+        if (!empty($user)) {
+          $info = '少年，用户名已存在哟，O(∩_∩)O';
+          return view('index',['info'=>$info]);
+        }
+
         if (!empty($flag)) {
-            try {
-              DB::transaction(function() use ($name,$pwd,$code,$now)
-              {
-                  $flag = DB::insert("insert into radcheck (username,attribute,op,value) values (?,?,?,?)", [$name, 'User-Password', ':=', $pwd ]);
-                  $flag = DB::update("update vcode set username = '?' , updated_at = '?',status = 1 where info = '?'", [$name,$now,$code]);
-              });
-            } catch (Exception $e) {
-              $info = '数据库发生错乱，O(∩_∩)O';
-              return view('index',['info'=>$info]);
-            }
+              $flag = DB::insert("insert into radcheck (username,attribute,op,value) values (?,?,?,?)", [$name, 'User-Password', ':=', $pwd ]);
+              if ($flag) {
+                $flag1 = DB::update("update vcode set username = ?, updated_at = ?,status = 1 where info = ?", [$name,$now,$code]);
+              }
             Session::put('name', $name);
             return redirect('home');
         }else{
