@@ -8,7 +8,7 @@
     <p>连接方式：pptp</p>
     <p>连接地址：45.32.36.201</p>
     <p>用户名：<?php echo Session::get('name');?></p>
-    <p>密码：我也不知道你写了啥</p>
+    <p>密码：<a href="javascript:void(0);">修改密码（doing）</a></p>
   </div>
 </div>
 <div class="col-md-1"></div>

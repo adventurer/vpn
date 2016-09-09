@@ -17,19 +17,16 @@
       <div class=main-panel>
         <header class="header navbar">
           <ul class="nav navbar-nav">
-            <li>
-              <a href="http://vpn.xlvlx.com"><p class=navbar-text> vpn.xlvlx.com </p></a>
-            </li>
+              <a href="http://{{$_SERVER['HTTP_HOST']}}"><p class=navbar-text> vpn.xlvlx.com </p></a>
           </ul>
-          <ul class="nav navbar-nav navbar-right hidden-xs">
-
+          <ul class="nav navbar-nav navbar-right">
             <li>
               <a href=javascript:; data-toggle=dropdown>
                 <img src= /static/images/avatar.21d1cc35.jpg class="header-avatar img-circle ml10" alt=user title=user>
                 <span class=pull-left><?php echo Session::get('name'); ?></span>
               </a>
               <ul class=dropdown-menu>
-                <li> <a href=/logout>Logout</a> </li>
+                <li><a href=/logout><i class="fa fa-sign-out"></i>登出</a></li>
               </ul>
             </li>
 
