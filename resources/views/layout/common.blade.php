@@ -39,6 +39,7 @@
       <footer class=content-footer>
         <nav class=footer-right>
           <ul class=nav>
+            <li> <span class="label label-warning" href=javascript:;>联系qq：1550520500 千叶传奇</span> </li>
             <li> <a href=javascript:;>QQ群：52568496</a> </li>
             <li>
               <a href=javascript:; class=scroll-up> <i class="fa fa-angle-up"></i> </a>
@@ -48,7 +49,7 @@
         <nav class=footer-left>
           <ul class=nav>
             <li> <a href=javascript:;>Copyright <i class="fa fa-copyright"></i> <span>xlvlx.com</span> 2016. All rights reserved</a> </li>
-            <li> <span class="label label-warning" href=javascript:;>联系qq：1550520500 千叶传奇</span> </li>
+
           </ul>
         </nav>
       </footer>
