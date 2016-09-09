@@ -17,7 +17,8 @@ class HomeController extends Controller
         if ($name) {
             $ret = DB::select("select sum(acctinputoctets) 'in' ,sum(acctoutputoctets) 'out'  from radacct where username = ?", [$name]);
             $acct = DB::table('radacct')->where('username',$name)->orderby('radacctid','desc')->paginate(15);
-            $data = array('data' => $ret,'acct'=>$acct);
+            $regtime = DB::table('vcode')->where('username',$name)->get()[0];
+            $data = array('data' => $ret,'acct'=>$acct,'regtime'=>$regtime);
             return view('home', $data);
         } else {
             return redirect('/');
