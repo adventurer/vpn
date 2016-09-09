@@ -9,7 +9,7 @@
     <p>连接地址：45.32.36.201</p>
     <p>用户名：<?php echo Session::get('name');?></p>
     <p>密码：<a href="javascript:void(0);">修改密码（doing）</a></p>
-    <p>有效时间：{{isset($regtime)?$regtime->updated_at}}-{{date('Y-m-d h:i:s',strtotime($regtime->updated_at.' +1 year')):'default'}}</p>
+    <p>有效时间：{{isset($regtime)?$regtime->updated_at:'default'}}-{{isset($regtime)?date('Y-m-d h:i:s',strtotime($regtime->updated_at.' +1 year')):'default'}}</p>
   </div>
 </div>
 <div class="col-md-1"></div>
