@@ -21,7 +21,7 @@
           <div class="form-group">
             <label class="col-sm-2 control-label">用户名：</label>
             <div class="col-sm-10">
-              <input name="name" class="form-control" Placeholder="4到10位字母或数字">
+              <input id="account" name="name" class="form-control" Placeholder="4到10位字母或数字">
               <p class="help-block">用于vpn连接的账户.</p>
             </div>
           </div>
@@ -95,12 +95,19 @@
 
 
 
-
+<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
   function change(i){
     $('#div1').hide(3);
     $('#div2').hide(3);
     $('#div'+i).show(3);
   }
+  $('#account').change(function(){
+    if(!(/^\w+$/).test($(this).val())){
+      $(this).val('');
+      alert('只能包含数字或字母');
+      return
+    }
+  });
 </script>
 @stop
