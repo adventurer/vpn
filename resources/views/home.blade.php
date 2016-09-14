@@ -10,35 +10,24 @@
         <p>连接地址：45.32.36.201</p>
         <p>用户名：<?php echo Session::get('name');?></p>
         <p>密码：<a href="javascript:void(0);">修改密码（doing）</a></p>
-        <p>秘钥：vpn.xlvlx.com</p>
+        <p>密钥：vpn.xlvlx.com</p>
         <p>有效时间：{{isset($regtime)?$regtime->updated_at:'default'}}-{{isset($regtime)?date('Y-m-d h:i:s',strtotime($regtime->updated_at.' +1 year')):'default'}}</p>
-        <p>链接图例：有图群主只有ios10的手机，其余图请自行脑补2333</p>
+        <p>链接图例：群主只有ios的手机，其余图请自行脑补2333</p>
       </div>
     </div>
 
-    <div class="panel col-md-2">
+    <div class="panel col-md-4">
       <div class="panel-body">
         <img style="width:100%;height:100%;" src="/static/images/l2tp.png" alt="" />
       </div>
     </div>
 
-    <div class="panel col-md-2">
+    <div class="panel col-md-4">
       <div class="panel-body">
-        <img style="width:100%;height:100%;" src="/static/images/l2tp.png" alt="" />
+        <img style="width:100%;height:100%;" src="/static/images/pptp.png" alt="" />
       </div>
     </div>
 
-    <div class="panel col-md-2">
-      <div class="panel-body">
-        <img style="width:100%;height:100%;" src="/static/images/l2tp.png" alt="" />
-      </div>
-    </div>
-
-    <div class="panel col-md-2">
-      <div class="panel-body">
-        <img style="width:100%;height:100%;" src="/static/images/l2tp.png" alt="" />
-      </div>
-    </div>
   </div>
   <div class="col-md-1"></div>
 </div>
