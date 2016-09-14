@@ -6,7 +6,7 @@
   <div class="panel col-md-10">
     <div class="panel col-md-4">
       <div class="panel-body">
-        <p>连接方式：pptp</p>
+        <p>连接方式：pptp,l2tp(目前仅支持这2种)</p>
         <p>连接地址：45.32.36.201</p>
         <p>用户名：<?php echo Session::get('name');?></p>
         <p>密码：<a href="javascript:void(0);">修改密码（doing）</a></p>
