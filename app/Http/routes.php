@@ -17,7 +17,7 @@ Route::get('/', function () {
     $name =  Session::get('name');
     if (!$name) {
         $v = ['API-Key'=>'6PEVEA2SFEB2QYSCTEALFM57MVFYOHCOZUXQ'];
-        $server = Tools::curl('https://api.vultr.com/v1/server/bandwidth\?SUBID\=4653179',0,'','', $v);
+        $server = Tools::curl('https://api.vultr.com/v1/server/bandwidth?SUBID=4653179',0,'','', $v);
         print_r($server);
         return view('index');
     } else {
