@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use DB;
 use Request;
 use Session;
+use App\Tools;
 
 /**
  *
@@ -18,6 +19,9 @@ class HomeController extends Controller
             $ret = DB::select("select sum(acctinputoctets) 'in' ,sum(acctoutputoctets) 'out'  from radacct where username = ?", [$name]);
             $acct = DB::table('radacct')->where('username',$name)->orderby('radacctid','desc')->paginate(15);
             $regtime = @DB::table('vcode')->where('username',$name)->get()[0];
+            $v = ['API-Key'=>'6PEVEA2SFEB2QYSCTEALFM57MVFYOHCOZUXQ'];
+            print_r($v);exit;
+            $server = Tools::curl('https://api.vultr.com/v1/server/bandwidth\?SUBID\=4653179',0,'','', $v);
             $data = array('data' => $ret,'acct'=>$acct,'regtime'=>$regtime);
             return view('home', $data);
         } else {
