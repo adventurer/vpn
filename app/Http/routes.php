@@ -11,6 +11,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\Tools;
 
 Route::get('/', function () {
     $name =  Session::get('name');
